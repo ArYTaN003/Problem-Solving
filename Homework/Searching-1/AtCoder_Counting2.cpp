@@ -3,11 +3,14 @@ using namespace std;
 int main(){
   int n,q;
   cin >> n >> q;
-  vector<int> height(n);
+  // cout << n << endl;
+  vector<int> arr(n);
   for(int i=0;i<n;i++){
-    cin >> height[i];
+    cin >> arr[i];
+    // cout << arr[i] << " ";
   }
-  sort(height.begin(),height.end());
+  // cout << endl;
+  sort(arr.begin(),arr.end());
   int query;
   for(int i=0;i<q;i++){
     cin >> query;
@@ -16,13 +19,13 @@ int main(){
     int ind = n;
     while(l<=u){
       mid = l+(u-l)/2;
-      if(height[mid]>=query){
+      if(arr[mid]>=query){
         // Mid is a possible candidate
         ind = mid;
         // we look futher left
         u = mid-1;
       }else{
-        // we go towards right ,  as there will be no greater elements in the left
+        // we go towards right
         l=mid+1;
       }
     }

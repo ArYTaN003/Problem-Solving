@@ -8,6 +8,7 @@ bool search(vector<int> &arr, int target)
             return true;
         if (arr[mid] == arr[l] && arr[mid] == arr[u])
         {
+            // In this case we can ignore elements at l,u and exclude them.
             l++;
             u--;
         }

@@ -11,5 +11,4 @@ int curr_path_sum(TreeNode* root,int target,long long sum){
         int c = pathSum(root->left,targetSum)+pathSum(root->right,targetSum);
         // Explore all paths from root
         return c+curr_path_sum(root,targetSum,0);
-        
     }

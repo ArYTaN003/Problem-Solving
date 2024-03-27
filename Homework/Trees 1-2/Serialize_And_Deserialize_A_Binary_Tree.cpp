@@ -25,6 +25,7 @@
     // Decodes your encoded data to tree.
     TreeNode* deserialize(string data) {
         if (data=="n") return NULL;
+        // n implies NULL
         // stringstream reads the string like an input , each word separated by space is taken as separate input
         stringstream ss(data);
         string temp;

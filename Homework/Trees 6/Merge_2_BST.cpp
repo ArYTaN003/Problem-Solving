@@ -1,8 +1,6 @@
 class Solution
 {
     public:
-    //Function to return a list of integers denoting the node 
-    //values of both the BST in a sorted order.
     void inorder(Node*root,vector<int>& inord){
         if(root==NULL) return ;
         inorder(root->left,inord);

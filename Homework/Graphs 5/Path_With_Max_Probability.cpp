@@ -12,9 +12,14 @@ public:
         distance[start]=1.0;
         priority_queue<pair<double,int>> q;
         q.push({1.0,start});
+        double ary = 0;
         while(!q.empty()){
             auto curr = q.top();
             q.pop();
+            if(curr.second==end){
+                ary = max(ary,curr.first);
+                continue;
+            }
             for(auto i:adj[curr.second]){
                 int node = i.first;
                 double prob = i.second;
@@ -25,6 +30,6 @@ public:
                 }
             }
         }
-        return distance[end];
+        return ary;
     }
 };

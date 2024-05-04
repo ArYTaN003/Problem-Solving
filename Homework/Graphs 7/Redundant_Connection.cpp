@@ -38,7 +38,7 @@ public:
         DSU dsu(n+1);
         for(auto edge:edges){
             // If edge[0] , edge[1] are already connected , we dont need this edge.
-            if(!dsu.join(edge[1],edge[0])) return edge;
+            if(!dsu.join(edge[0],edge[1])) return edge;
         }
         return {};
     }
